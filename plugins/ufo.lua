@@ -3,7 +3,7 @@ return {
     "kevinhwang91/nvim-ufo",
     dependencies = {
       "kevinhwang91/promise-async",
-      { 'neoclide/coc.nvim',               branch = 'master',  build = 'yarn install --frozen-lockfile' },
+      -- { 'neoclide/coc.nvim',               branch = 'master',  build = 'yarn install --frozen-lockfile' },
       { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' }
     }
     --   event = "BufReadPost", -- needed for folds to load properly
