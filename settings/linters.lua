@@ -1,3 +1,10 @@
+--[[
+Linters should be
+filled in as strings with either
+a global executable or a path to
+an executable
+--]]
+
 -- -- set additional linters
 -- local linters = require "lvim.lsp.null-ls.linters"
 -- linters.setup {

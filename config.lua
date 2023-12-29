@@ -1,11 +1,7 @@
 --[[
 lvim is the global options object
-
-Linters should be
-filled in as strings with either
-a global executable or a path to
-an executable
 ]]
+
 --  @NOTE: All settings and plugins have their own file now (either /settings or /plugins)
 
 -- Additional Plugins
