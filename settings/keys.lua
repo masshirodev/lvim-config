@@ -38,11 +38,9 @@
 
 lvim.leader = "space"
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
-
 lvim.builtin.which_key.mappings["F"] = {
   '<cmd>Telescope live_grep grep_open_files=true search="function "<cr>', "Find function"
 }
-
 lvim.builtin.which_key.mappings["t"] = {
   '<cmd>TodoQuickFix<cr>', "TODOs"
 }
