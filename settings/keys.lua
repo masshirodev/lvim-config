@@ -44,3 +44,13 @@ lvim.builtin.which_key.mappings["F"] = {
 lvim.builtin.which_key.mappings["t"] = {
   '<cmd>TodoQuickFix<cr>', "TODOs"
 }
+
+lvim.builtin.which_key.mappings["r"] = {
+  ["r"] = { "<cmd>TodoTrouble<CR>", "QuickFix" },
+  ["f"] = { "<cmd>TodoTrouble<CR>", "Errors" },
+  "Trouble",
+}
+
+-- Makes so d doesnt overwrite the system clipboard
+vim.api.nvim_set_keymap('n', 'd', '"ad', { noremap = true })
+vim.api.nvim_set_keymap('v', 'd', '"ad', { noremap = true })

@@ -1,3 +1,9 @@
-return {
-  "tpope/vim-abolish"
-}
+M = require "base_plugin"
+
+M.lazy = function()
+  return {
+    "tpope/vim-abolish"
+  }
+end
+
+return M

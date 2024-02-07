@@ -25,7 +25,7 @@ vim.opt.relativenumber = true
 -- vim.api.nvim_set_option('termguicolors', true)
 -- vim.api.nvim_command('hi Normal guibg=NONE ctermbg=NONE')
 -- vim.api.nvim_command('hi NormalNC guibg=NONE ctermbg=NONE')
--- lvim.transparent_window = true
+lvim.transparent_window = true
 
 -- Change theme settings
 -- lvim.builtin.theme.options.dim_inactive = true
