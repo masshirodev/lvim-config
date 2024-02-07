@@ -1,6 +1,4 @@
-M = require "base_plugin"
 
-M.lazy = function()
   return {
     {
       "kevinhwang91/nvim-ufo",
@@ -10,6 +8,3 @@ M.lazy = function()
       }
     },
   }
-end
-
-return M

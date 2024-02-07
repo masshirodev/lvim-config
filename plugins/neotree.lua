@@ -1,6 +1,4 @@
-M = require "base_plugin"
 
-M.lazy = function()
   return {
     {
       "nvim-neo-tree/neo-tree.nvim",
@@ -288,6 +286,3 @@ M.lazy = function()
       -- end
     }
   }
-end
-
-return M

@@ -1,6 +1,4 @@
-M = require "base_plugin"
 
-M.lazy = function()
   return {
     "rebelot/kanagawa.nvim",
     "rmehri01/onenord.nvim",
@@ -18,6 +16,3 @@ M.lazy = function()
     'rktjmp/lush.nvim',
     "scysta/pink-panic.nvim",
   }
-end
-
-return M

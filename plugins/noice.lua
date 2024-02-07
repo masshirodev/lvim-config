@@ -1,6 +1,4 @@
-M = require "base_plugin"
 
-M.lazy = function()
   return {
     {
       "folke/noice.nvim",
@@ -18,6 +16,3 @@ M.lazy = function()
       }
     }
   }
-end
-
-return M

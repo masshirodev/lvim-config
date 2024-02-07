@@ -1,13 +1,5 @@
-M = require "base_plugin"
 
-M.lazy = function()
-  return {
-    "zbirenbaum/copilot-cmp",
-    "github/copilot.vim"
-  }
-end
-
-M.setup = function()
+  
   lvim.builtin.cmp.formatting.source_names["copilot"] = "(Copilot)"
   table.insert(lvim.builtin.cmp.sources, 1, { name = "copilot" })
 
@@ -44,6 +36,7 @@ M.setup = function()
   end
 
   -- lvim.builtin.lualine.sections.lualine_x[#lvim.builtin.lualine.sections.lualine_x + 1] = { copilot_indicator }
-end
-
-return M
+  return {
+    "zbirenbaum/copilot-cmp",
+    "github/copilot.vim"
+  }

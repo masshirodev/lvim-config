@@ -1,6 +1,4 @@
-M = require "base_plugin"
 
-M.lazy = function()
   return {
     {
       's1n7ax/nvim-window-picker',
@@ -12,6 +10,3 @@ M.lazy = function()
       end,
     }
   }
-end
-
-return M

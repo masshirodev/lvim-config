@@ -1,6 +1,4 @@
-M = require "base_plugin"
 
-M.lazy = function()
   return {
     {
       "NeogitOrg/neogit",
@@ -12,6 +10,3 @@ M.lazy = function()
       config = true
     }
   }
-end
-
-return M

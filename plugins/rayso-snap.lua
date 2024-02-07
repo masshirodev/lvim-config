@@ -1,6 +1,4 @@
-M = require "base_plugin"
 
-M.lazy = function()
   return {
     {
       "masshirodev/rayso-snap.nvim",
@@ -15,6 +13,3 @@ M.lazy = function()
       end,
     }
   }
-end
-
-return M

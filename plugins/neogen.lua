@@ -1,6 +1,4 @@
-M = require "base_plugin"
 
-M.lazy = function()
   return {
     {
       "danymat/neogen",
@@ -10,6 +8,3 @@ M.lazy = function()
       -- version = "*"
     }
   }
-end
-
-return M

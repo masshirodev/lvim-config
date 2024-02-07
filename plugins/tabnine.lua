@@ -1,15 +1,4 @@
-M = require "base_plugin"
 
-M.lazy = function()
-  return {
-    -- {
-    --   'codota/tabnine-nvim',
-    --   build = "./dl_binaries.sh",
-    -- }
-  }
-end
-
-M.setup = function()
   -- lvim.builtin.cmp.formatting.source_names["tabnine"] = "(Tabnine)"
   -- table.insert(lvim.builtin.cmp.sources, 1, { name = "tabnine" })
 
@@ -40,6 +29,9 @@ M.setup = function()
   --     fallback()
   --   end
   -- end
-end
-
-return M
+  return {
+    -- {
+    --   'codota/tabnine-nvim',
+    --   build = "./dl_binaries.sh",
+    -- }
+  }

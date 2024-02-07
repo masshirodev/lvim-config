@@ -1,6 +1,4 @@
-M = require "base_plugin"
 
-M.lazy = function()
   return {
     {
       "folke/todo-comments.nvim",
@@ -19,6 +17,3 @@ M.lazy = function()
       }
     }
   }
-end
-
-return M

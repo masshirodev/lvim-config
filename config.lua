@@ -9,35 +9,35 @@ lvim.plugins = {
   "nvim-lua/plenary.nvim", -- Needed to autoload files from /plugins
 }
 
-local plugin_loader = require "plugin_loader"
-plugin_loader.load()
+-- local plugin_loader = require "plugin_loader"
+-- plugin_loader.load()
 
--- local function load_plugin_extensions(directory)
---   local plugins = {}
---   local scan_dir = require('plenary.scandir')
---   local plugin_files = scan_dir.scan_dir(directory, { depth = 1, search_pattern = "%.lua$" })
+local function load_plugin_extensions(directory)
+  local plugins = {}
+  local scan_dir = require('plenary.scandir')
+  local plugin_files = scan_dir.scan_dir(directory, { depth = 1, search_pattern = "%.lua$" })
 
---   for i, file in ipairs(plugin_files) do
---     if file:find("base_plugin.lua") then
---       table.remove(plugin_files, i)
---     end
---   end
+  for i, file in ipairs(plugin_files) do
+    if file:find("base_plugin.lua") then
+      table.remove(plugin_files, i)
+    end
+  end
 
---   for _, file in ipairs(plugin_files) do
---     local f = assert(loadfile(file))
---     local plugin_list = f()
---     for _, plugin in ipairs(plugin_list) do
---       table.insert(plugins, plugin)
---     end
---   end
+  for _, file in ipairs(plugin_files) do
+    local f = assert(loadfile(file))
+    local plugin_list = f()
+    for _, plugin in ipairs(plugin_list) do
+      table.insert(plugins, plugin)
+    end
+  end
 
---   return plugins
--- end
+  return plugins
+end
 
--- local plugin_extensions = load_plugin_extensions(vim.fn.stdpath('config') .. '/plugins')
--- for _, plugin in ipairs(plugin_extensions) do
---   table.insert(lvim.plugins, plugin)
--- end
+local plugin_extensions = load_plugin_extensions(vim.fn.stdpath('config') .. '/plugins')
+for _, plugin in ipairs(plugin_extensions) do
+  table.insert(lvim.plugins, plugin)
+end
 
 -- Settings
 local function load_settings(directory)

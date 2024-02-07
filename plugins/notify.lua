@@ -1,6 +1,4 @@
-M = require "base_plugin"
 
-M.lazy = function()
   return {
     "rcarriga/nvim-notify",
     config = function()
@@ -18,6 +16,3 @@ M.lazy = function()
       vim.notify = plg
     end,
   }
-end
-
-return M
