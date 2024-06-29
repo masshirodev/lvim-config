@@ -44,3 +44,7 @@ lvim.builtin.which_key.mappings["F"] = {
 lvim.builtin.which_key.mappings["t"] = {
   '<cmd>TodoQuickFix<cr>', "TODOs"
 }
+
+lvim.builtin.which_key.mappings["e"] = {
+  '<cmd>Neotree toggle<CR>', "Explorer"
+}

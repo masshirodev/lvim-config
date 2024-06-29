@@ -55,6 +55,9 @@ local config = {
 
   settings = {
     java = {
+      trace = {
+        server = 'off'
+      },
       eclipse = {
         downloadSources = true,
       },
@@ -98,9 +101,17 @@ local config = {
 }
 
 config["on_attach"] = function(client, bufnr)
+  -- client.config.settings = {
+  --   java = {
+  --     trace = {
+  --       server = 'off'
+  --     }
+  --   }
+  -- }
+
   local _, _ = pcall(vim.lsp.codelens.refresh)
- require("jdtls").setup_dap({ hotcodereplace = "auto" })
- require("lvim.lsp").on_attach(client, bufnr)
+  require("jdtls").setup_dap({ hotcodereplace = "auto" })
+  require("lvim.lsp").on_attach(client, bufnr)
   local status_ok, jdtls_dap = pcall(require, "jdtls.dap")
   if status_ok then
     jdtls_dap.setup_dap_main_class_configs()
@@ -112,6 +123,15 @@ vim.api.nvim_create_autocmd({ "BufWritePost" }, {
   callback = function()
     local _, _ = pcall(vim.lsp.codelens.refresh)
   end,
+})
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "java",
+  callback = function()
+    vim.opt.tabstop = 4          -- Sets the width of a tab
+    vim.opt.shiftwidth = 4       -- Sets the size of an indent
+    vim.opt.expandtab = true     -- Converts tabs to spaces
+  end
 })
 
 local formatters = require "lvim.lsp.null-ls.formatters"
@@ -237,4 +257,3 @@ which_key.register(vmappings, vopts)
 --     port = 5005,
 --   },
 -- }
-
